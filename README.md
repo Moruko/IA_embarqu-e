@@ -16,3 +16,8 @@ Par ailleurs, nous avons observé une grande hétérogénéité dans la distribu
 
 ![image](https://github.com/user-attachments/assets/6f740bf3-27f6-46d5-bd75-e44e020705a9)
 
+Le taux d'accuracy étant élevé, on pourrait penser que le réseau de neurones est performant. Pourtant, les graphes ci-dessous montre qu'il y a bien un overfitting.
+
+#red{Problème de graphe}
+
+
