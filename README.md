@@ -18,6 +18,16 @@ Par ailleurs, nous avons observé une grande hétérogénéité dans la distribu
 
 Le taux d'accuracy étant élevé, on pourrait penser que le réseau de neurones est performant. Pourtant, les graphes ci-dessous montre qu'il y a bien un overfitting.
 
-# red(Problème de graphe)
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Problème de graphes !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Pour équilibrer la distribution des données, on effectue un suréchantillonnage. Cette méthode consiste à générer des données synthétiques pour les classes minoritaires afin d'augmenter leur nombre.On utilise la technique du SMOTE (Synthetic Minority Over-sampling Technique), qui crée de nouveaux exemples pour la classe minoritaire en interpolant entre les points de données existants.
+
+![image](https://github.com/user-attachments/assets/34cd2170-6351-4b95-b5f6-fbb609910fd9)
+
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Problème d'accuracy et de graphes pour les données équilibrées!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Le modèle est ensuite enregistré dans un fichier .h5 qui sera exporté sur STM32CubeIde.
+
+## Exportation du modèle sur STM32CubeIde
 
 
