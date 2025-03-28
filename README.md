@@ -30,4 +30,10 @@ Le modèle est ensuite enregistré dans un fichier .h5 qui sera exporté sur STM
 
 ## Exportation du modèle sur STM32CubeIde
 
+Le réseau de neurones est transféré sur STM32CubeIde, qui dont les performances peut être analysées et évaluées.
+![image](https://github.com/user-attachments/assets/7f1df509-2cdf-423f-b13b-b6d9b5f65181)
+
+![graphe maintenance](https://github.com/user-attachments/assets/470af8f1-a722-488b-be91-7ab5e3b4282a)
+
+## Inférence du modèle sur la carte STM32L4R9
 
