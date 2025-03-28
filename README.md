@@ -44,6 +44,7 @@ Le réseau de neurones est transféré sur STM32CubeIde, qui dont les performanc
 
 ![graphe maintenance](https://github.com/user-attachments/assets/470af8f1-a722-488b-be91-7ab5e3b4282a)
 
+L'accuracy de 100% révèle l'overfitting de notre modèle. Il n'est donc pas optimal.
 
 ## Implémentation du modèle sur la carte STM32L4R9
 Un code C implémente le modèle d'IA sur un microcontrôleur STM32 en utilisant X-CUBE-AI, avec une communication UART pour échanger des données avec un périphérique externe.
