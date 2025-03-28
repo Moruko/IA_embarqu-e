@@ -53,4 +53,8 @@ Les fonctions acquire_and_process_data et post_process assurent la conversion de
 ## Validation du comportement
 Pour évaluer le bon fonctionnement du système, un script Python joue le rôle d'interface de test. Son objectif est double : envoyer des données de test au microcontrôleur et analyser les résultats renvoyés. La synchronisation précise entre les deux programmes est cruciale, c'est pourquoi les fonctions synchronize_UART (STM32) et synchronise_UART (Python) mettent en place un protocole d'échange pour initier proprement chaque transmission.
 
+À cause d’un problème lié à la carte, le programme Python analyse les données lors de la première itération, puis s’interrompt. Nous ne pouvons donc pas évaluer l’ensemble du modèle final. Cependant, nous avons testé un modèle antérieur (sans équilibrage des données) en utilisant une carte AREM. Avec ce matériel, nous avons vérifié le bon fonctionnement du microcontrôleur.
 
+![Capture d’écran IA Embarqué](https://github.com/user-attachments/assets/3445faa1-6ffe-4115-9e60-53ae61c39b40)
+
+Le réseau de neurones utilisé présentant de l’overfitting, nous obtenons une accuracy de 98 %.
