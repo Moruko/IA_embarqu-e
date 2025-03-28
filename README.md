@@ -1,5 +1,6 @@
 # IA_embarquée
 
+## Introduction
 Dans les industries, la gestion de la logistique des produits à travers les différentes machines d'un workshop est un véritable casse-tête. En effet, de nombreux paramètres peuvent être ajustés afin d'optimiser le coût de production. On peut notamment modifier l'ordonnancement des produits ainsi que le nombre de produits traités.
 Dans ce projet, nous nous intéressons à la gestion de la maintenance. Il est souvent difficile de déterminer le moment optimal pour effectuer une maintenance sur une machine donnée. Est-il plus pertinent de réaliser régulièrement des maintenances légères, ou vaut-il mieux attendre que la machine atteigne un état dégradé pour effectuer une intervention plus importante ? La maintenance représente un coût considérable pour les industries, ce qui rend essentiel l’optimisation de ces dépenses.
 Pour répondre à ces enjeux, un nouvel outil gagne en popularité dans le secteur industriel : l'intelligence artificielle.
@@ -19,11 +20,10 @@ Ce déséquilibre pose un problème, car le modèle n'a pas suffisamment de donn
 
 ![image](https://github.com/user-attachments/assets/6f740bf3-27f6-46d5-bd75-e44e020705a9)
 
-Le taux d'accuracy étant élevé, on pourrait penser que le réseau de neurones est performant. Pourtant, les graphes ci-dessous montre qu'il y a bien un overfitting.
+Le taux d'accuracy étant élevé, on pourrait penser que le réseau de neurones est performant. En effet, les graphes ci-dessous montre que l'amélioration est totalement linéaire et que l'accuracy atteint des valeurs élevées très rapidement.
 
 ![image](https://github.com/user-attachments/assets/32c19395-bc0f-4db5-8adc-d162c554e7bc)
 
-# !Problème de graphes !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 Pour équilibrer la distribution des données, on effectue un suréchantillonnage. Cette méthode consiste à générer des données synthétiques pour les classes minoritaires afin d'augmenter leur nombre.On utilise la technique du SMOTE (Synthetic Minority Over-sampling Technique), qui crée de nouveaux exemples pour la classe minoritaire en interpolant entre les points de données existants.
 
@@ -31,9 +31,9 @@ Pour équilibrer la distribution des données, on effectue un suréchantillonnag
 
 ![image](https://github.com/user-attachments/assets/39fd0b6f-4dcb-4d1e-a74f-2a959fac5e32)
 
-![image](https://github.com/user-attachments/assets/8978f33c-a6cb-475e-86ca-8d8f33908471)
+On observe que l'accuracy pendant l'entrainement est de 90% tandis qu'elle est de 67% pour la phase de test. Le modèle n'est donc pas optimal et pourrait être amélioré.
 
-# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Problème d'accuracy et de graphes pour les données équilibrées!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+![image](https://github.com/user-attachments/assets/8978f33c-a6cb-475e-86ca-8d8f33908471)
 
 Le modèle est ensuite enregistré dans un fichier .h5 qui sera exporté sur STM32CubeIde.
 
@@ -58,3 +58,6 @@ Pour évaluer le bon fonctionnement du système, un script Python joue le rôle 
 ![Capture d’écran IA Embarqué](https://github.com/user-attachments/assets/3445faa1-6ffe-4115-9e60-53ae61c39b40)
 
 Le réseau de neurones utilisé présentant de l’overfitting, nous obtenons une accuracy de 98 %.
+
+## Conclusion
+Ce projet valide la faisabilité d’un système embarqué de maintenance prédictive, avec une communication fonctionnelle entre Python et la STM32 via UART. Cependant, le modèle souffre d'overfitting et les problèmes matériels ont limité les tests finaux. Bien que prometteuse pour réduire les coûts industriels, cette approche nécessite encore des améliorations, notamment sur la fiabilité du modèle et du matériel, avant un déploiement à grande échelle. Une analyse du coût de l'utilisation de l'IA serait intéressante pour évaluer son intérêt économique réel.
